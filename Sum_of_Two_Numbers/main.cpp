@@ -8,7 +8,6 @@
 #include <vector>
 #include <cmath>
 using namespace std;
-
 typedef int ElementType;
 typedef int Index;
 
@@ -17,6 +16,7 @@ typedef struct LNode* PtrToLNode;
 struct LNode
 {
     ElementType Data;
+    int order;
     PtrToLNode Next;
 };
 typedef PtrToLNode List;
@@ -96,7 +96,7 @@ class Solution{
             }
             return P;     // return the address of key or Null for not being found
         }
-        bool Insert(ElementType key)
+        bool Insert(ElementType key, int order)
         {
             List P, NewCell;
             Index Pos;
@@ -106,6 +106,7 @@ class Solution{
             {
                 NewCell = new struct LNode;
                 NewCell->Data = key;
+                NewCell->order = order; 
                 Pos = Hash(key);
                 NewCell->Next = H->Heads[Pos].Next;
                 H->Heads[Pos].Next = NewCell;
@@ -122,25 +123,36 @@ class Solution{
 
         vector<int> twoSum(vector<int>& nums, int target)
         {
-            List L;
+            List P, NewCell;
+            Index Pos;
+
             for(int i = 0; i < nums.size(); i ++)
             {
-                Insert(nums[i]);
-                L = Find(target - nums[i]);
-                if(L != NULL)
+                if(target - nums[i] != nums[i])
                 {
-                    // return {nums[i], target - nums[i]};
-                }
+                    P = Find(target - nums[i]);
+                    if(P != NULL)      // not found
+                    {
+                        return {P->order, i};
+                    }
+                    else
+                    {
+                        Insert(nums[i], i);
+                    }
+                }    
+                if(i == nums.size() - 1)
+                    return {-1, -1};           
             }
-            return {0,0};
+
         }
 };
 
 
 int main()
 {
-    //vector<int> a = {1,2,3,4};
-    Solution s(10);
+    vector<int> nums = {1,2,3,4};
+    vector<int> s = Solution(MaxTableSize).twoSum(nums,5);
+    cout << s[0] << "    " << s[1] << endl;
     cout << "ok" << endl;
     return 0;
 }
