@@ -29,7 +29,7 @@ struct TableNode
     List Heads;
 };
 const int MaxTableSize = 10000;
-
+const int TblSize = 8000;
 
 class Solution{
     private:
@@ -49,7 +49,7 @@ class Solution{
             return p;
         }
     public:
-        Solution(int TblSize)
+        Solution()
         {
             H = new struct TableNode;
             TableSize = NextPrime(TblSize);
@@ -81,7 +81,7 @@ class Solution{
 
         int Hash(const ElementType Key)
         {
-            return Key % TableSize;
+            return abs(Key % TableSize);
         }
         List Find(ElementType key)
         {
@@ -128,30 +128,25 @@ class Solution{
 
             for(int i = 0; i < nums.size(); i ++)
             {
-                if(target - nums[i] != nums[i])
+                P = Find(target - nums[i]);
+                if(P != NULL)      // not found
                 {
-                    P = Find(target - nums[i]);
-                    if(P != NULL)      // not found
-                    {
-                        return {P->order, i};
-                    }
-                    else
-                    {
-                        Insert(nums[i], i);
-                    }
-                }    
-                if(i == nums.size() - 1)
-                    return {-1, -1};           
+                    return {P->order, i};
+                }
+                else
+                {
+                    Insert(nums[i], i);
+                }             
             }
-
+            return {-1, -1};
         }
 };
 
 
 int main()
 {
-    vector<int> nums = {1,2,3,4};
-    vector<int> s = Solution(MaxTableSize).twoSum(nums,5);
+    vector<int> nums = {0,4,3,0};
+    vector<int> s = Solution().twoSum(nums,0);
     cout << s[0] << "    " << s[1] << endl;
     cout << "ok" << endl;
     return 0;
