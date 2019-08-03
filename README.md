@@ -1,8 +1,9 @@
 
 本仓库展示了LeetCode经典题目的解法
  
-Sum_of_Two_Numbers  两数之和问题       题目序号： 1
-Valid_Bracket       有效的括号         题目序号：20
+Sum_of_Two_Numbers      题目:两数之和问题       序号： 1
+
+Valid_Bracket           题目:有效的括号         序号：20
 
 由于LeetCode题库的更新，上述内容以题目为准，程序中给出了问题描述和输入输出样例
 
