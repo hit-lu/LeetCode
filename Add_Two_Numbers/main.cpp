@@ -10,16 +10,16 @@ struct ListNode
 };
 class Solution
 {
-public:
-	ListNode* ConstuctList(vector<int> n)
-	{
-		ListNode* head = new ListNode(0), * cur = head;
-		for (int i = 0; i < n.size(); i++)
-		{
-			cur->next = new ListNode(n[i]);
-			cur = cur->next;
-		}
-		return head->next;
+    public:
+        ListNode* ConstuctList(vector<int> n)
+        {
+            ListNode* head = new ListNode(0), * cur = head;
+            for(int i = 0; i < n.size(); i ++)
+            {
+                cur->next = new ListNode(n[i]);
+                cur = cur->next;
+            }
+            return head->next;
 
 	}
 	void PrintList(ListNode* head)
