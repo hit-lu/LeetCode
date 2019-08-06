@@ -10,45 +10,50 @@ struct ListNode
 };
 class Solution
 {
-    public:
-        ListNode* ConstuctList(vector<int> n)
-        {
-            ListNode* head = new ListNode(0), * cur = head;
-            for(int i = 0; i < n.size(); i ++)
-            {
-                cur->next = new ListNode(n[i]);
-                cur = cur->next;
-            }
-            return head->next;
-
-	}
-	void PrintList(ListNode* head)
-	{
-		while (head->next != NULL)
+	public:
+		ListNode* ConstuctList(vector<int> n)
 		{
-			cout << head->val << " -> ";
-			head = head->next;
-		}
-		cout << head->val << endl;
-	}
-	ListNode* addTwoNumbers(ListNode* l1, ListNode* l2)
-	{
-		ListNode* head = new ListNode(0);
-		ListNode* p = l1, *q = l2, *ret = head;
+			ListNode* head = new ListNode(0), * cur = head;
+			for (int i = 0; i < n.size(); i++)
+			{
+				cur->next = new ListNode(n[i]);
+				cur = cur->next;
+			}
+			return head->next;
 
-		int v1, v2, sum, carry = 0;
-		while (p != NULL || q != NULL)
+		}
+		void PrintList(ListNode* head)
 		{
-			if (p != NULL) 	v1 = p->val, p = p->next;    else  v1 = 0;
-			if (q != NULL)  v2 = q->val, q = q->next;    else  v2 = 0;
-			sum = v1 + v2 + carry;
-			carry = sum / 10;
-
-			ret->next = new ListNode(sum % 10);
-			ret = ret->next;
+			while (head->next != NULL)
+			{
+				cout << head->val << " -> ";
+				head = head->next;
+			}
+			cout << head->val << endl;
 		}
-		return head->next;
-	}
+		ListNode* addTwoNumbers(ListNode* l1, ListNode* l2)
+		{
+			ListNode* head = new ListNode(0);
+			ListNode* p = l1, *q = l2, *ret = head;
+
+			int v1, v2, sum, carry = 0;
+			while (p != NULL || q != NULL)
+			{
+				if (p != NULL) 	v1 = p->val, p = p->next;    else  v1 = 0;
+				if (q != NULL)  v2 = q->val, q = q->next;    else  v2 = 0;
+				sum = v1 + v2 + carry;
+				carry = sum / 10;
+
+				ret->next = new ListNode(sum % 10);
+				ret = ret->next;
+			}
+			if (carry == 1)
+			{
+				ret->next = new ListNode(carry);
+				ret = ret->next;
+			}
+			return head->next;
+		}
 };
 
 int main()
