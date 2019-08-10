@@ -1,4 +1,4 @@
-// 2019/8/1 Hash Table
+// 2019/8/9
 // Problem : Find a longest palindromic substring
 // Example
 // Input:  "aacdefcaa"
