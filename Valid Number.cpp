@@ -62,6 +62,10 @@ public:
 
 int main()
 {
+	cout << Solution().isNumber("1e3") << endl;
+	cout << Solution().isNumber("3.") << endl;
 	cout << Solution().isNumber(" .") << endl;
+	cout << Solution().isNumber("+4") << endl;
+	cout << Solution().isNumber("2e-4.2") << endl;
 	return 0;
 }
