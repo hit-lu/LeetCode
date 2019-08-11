@@ -1,4 +1,4 @@
-// 2019/08/11  Table-Driven Methods
+// 2019/08/10  Table-Driven Methods
 // Problem : check the validity of a string which describes a decimal number
 // Input - "1e3"         Output - true
 // Input - "3."          Output - true
