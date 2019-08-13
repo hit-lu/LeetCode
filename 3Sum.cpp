@@ -1,6 +1,6 @@
 // 2019/08/12
 // Problem: find three numbers whose sum is 0
-// Input: {0,0,0}           Output: {0}
+// Input: {0,0,0}           Output: {0,0,0}
 // Input: {2,0,-5,3,-4,4}   Output: {-4,0,4}  {2,-5,3}
 // Input: {-5,2,4,1}        Output: None
 #include <iostream>
