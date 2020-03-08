@@ -22,7 +22,7 @@ public:
 				threeSum = nums[i] + nums[front] + nums[last];
 				if (abs(cloestThreeSum - target) > abs(threeSum - target))
 				{
-					threeSum = cloestThreeSum;
+					cloestThreeSum = threeSum;
 				}
 				if (threeSum < target)
 				{
