@@ -16,8 +16,10 @@
 |  12  |      整数转罗马数字      |                Integer to Roman.cpp                |
 |  13  |      罗马数字转整数      |                Roman to Integer.cpp                |
 |  15  |         三数之和         |                      3Sum.cpp                      |
+|      |     最接近的三数之和     |                 3Sum Closest .cpp                  |
 |  20  |        有效的括号        |               Valid Parentheses.cpp                |
 |  22  |         括号生成         |              Generate Parentheses.cpp              |
+|  26  |  删除排序数组中的重复项  |      Remove Duplicates from Sorted Array.cpp       |
 |  37  |          解数独          |                 Sudoku Solver.cpp                  |
 |  42  |          接雨水          |              Trapping Rain Water.cpp               |
 |  43  |        字符串相乘        |                Multiply Strings.cpp                |
@@ -27,14 +29,15 @@
 |  70  |          爬楼梯          |                Climbing Stairs.cpp                 |
 |  72  |         编辑距离         |                 Edit Distance.cpp                  |
 |  79  |         单词搜索         |                  Word Search.cpp                   |
+|      |    字符串的最大公因子    |       Greatest Common Divisor of Strings.cpp       |
 
 笔者在编写代码时，受到了[力扣][https://leetcode-cn.com/p] 平台上大量算法爱好者的启发，他们的代码或是思路新颖、或是结构严谨，在我学习道路上起到的很大的帮助，在此一并表示感谢。在实际编写代码中，笔者力求在时间和空间效率上达到最优，但由于个人能力有限，只能尽可能做到这一点，欢迎同好的批评、建议和指正。
 
 
 
-##  关于Pull Request
+##  说明
 
-本仓库中的所有代码都经过了笔者调试，通过了LeetCode平台测试，并给出了一个Linux环境下VS Code工程模板。笔者本人欢迎学习和交流，但不接受任何的Pull Request，如果您有任何疑问或是希望交流，欢迎联系我的邮箱：hit_lu@foxmail.com，本人在采纳后会在该文档中加以说明。
+本仓库中的所有代码都经过了笔者调试，通过了LeetCode平台测试，并给出了一个Linux环境下VS Code工程模板。笔者本人欢迎学习和交流，欢迎联系我的邮箱：hit_lu@foxmail.com。
 
 
 
